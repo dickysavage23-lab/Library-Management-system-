@@ -56,4 +56,37 @@ button {
 
 button:hover {
     background: #08384d;
+}.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.book-card {
+    background: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.book-card h3 {
+    color: #0b4f6c;
+    margin-top: 0;
+}
+
+.book-card p {
+    color: #555;
+}
+
+.available {
+    color: green !important;
+    font-weight: bold;
+}
+
+.borrowed {
+    color: red !important;
+    font-weight: bold;
 }
