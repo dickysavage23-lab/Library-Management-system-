@@ -90,3 +90,39 @@ button:hover {
     color: red !important;
     font-weight: bold;
 }
+.form-section {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.form-section h2 {
+    color: #0b4f6c;
+    margin-bottom: 25px;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-section label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-section input {
+    width: auto;
+    max-width: none;
+    padding: 12px;
+}
+
+.form-section button {
+    margin-top: 25px;
+}
