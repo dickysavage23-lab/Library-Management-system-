@@ -126,3 +126,46 @@ button:hover {
 .form-section button {
     margin-top: 25px;
 }
+.dashboard {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.dashboard h2 {
+    color: #0b4f6c;
+    margin-bottom: 30px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card h3 {
+    color: #0b4f6c;
+}
+
+.dashboard-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.dashboard-card a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #0b4f6c;
+    color: white;
+    border-radius: 5px;
+}
