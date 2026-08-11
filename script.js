@@ -40,3 +40,19 @@ function borrowBook(bookName, statusId, buttonId) {
 
     alert(bookName + " has been borrowed successfully!");
 }
+window.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem("Things Fall Apart") === "borrowed") {
+        const status = document.getElementById("things-status");
+        const button = document.getElementById("things-button");
+
+        if (status) {
+            status.textContent = "🔴 Borrowed";
+            status.className = "borrowed";
+        }
+
+        if (button) {
+            button.textContent = "Borrowed";
+            button.disabled = true;
+        }
+    }
+});
