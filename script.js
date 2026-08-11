@@ -22,6 +22,14 @@ searchButton.addEventListener("click", function () {
         alert("Sorry, book not found.");
     }
 });
-function borrowBook(bookName) {
+function borrowBook(bookName, statusId) {
+    const status = document.getElementById(statusId);
+
+    if (status) {
+        status.textContent = "🔴 Borrowed";
+        status.className = "borrowed";
+    }
+
     alert(bookName + " has been borrowed successfully!");
+}
 }
