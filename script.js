@@ -22,3 +22,6 @@ searchButton.addEventListener("click", function () {
         alert("Sorry, book not found.");
     }
 });
+function borrowBook(bookName) {
+    alert(bookName + " has been borrowed successfully!");
+}
