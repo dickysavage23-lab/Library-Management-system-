@@ -32,4 +32,3 @@ function borrowBook(bookName, statusId) {
 
     alert(bookName + " has been borrowed successfully!");
 }
-}
