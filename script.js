@@ -96,3 +96,22 @@ function updateBookCounts() {
 }
 
 window.addEventListener("DOMContentLoaded", updateBookCounts);
+function updateDueDates() {
+    let dueCount = 1;
+
+    if (localStorage.getItem("Things Fall Apart") === "borrowed") {
+        dueCount++;
+    }
+
+    if (localStorage.getItem("The Great Gatsby") === "borrowed") {
+        dueCount++;
+    }
+
+    const dueElement = document.getElementById("due-count");
+
+    if (dueElement) {
+        dueElement.textContent = dueCount;
+    }
+}
+
+window.addEventListener("DOMContentLoaded", updateDueDates);
