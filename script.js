@@ -44,7 +44,20 @@ window.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("Things Fall Apart") === "borrowed") {
         const status = document.getElementById("things-status");
         const button = document.getElementById("things-button");
+if (localStorage.getItem("The Great Gatsby") === "borrowed") {
+    const status = document.getElementById("gatsby-status");
+    const button = document.getElementById("gatsby-button");
 
+    if (status) {
+        status.textContent = "🔴 Borrowed";
+        status.className = "borrowed";
+    }
+
+    if (button) {
+        button.textContent = "Borrowed";
+        button.disabled = true;
+    }
+}
         if (status) {
             status.textContent = "🔴 Borrowed";
             status.className = "borrowed";
