@@ -69,3 +69,30 @@ if (localStorage.getItem("The Great Gatsby") === "borrowed") {
         }
     }
 });
+function updateBookCounts() {
+    let borrowedCount = 1;
+
+    if (localStorage.getItem("Things Fall Apart") === "borrowed") {
+        borrowedCount++;
+    }
+
+    if (localStorage.getItem("The Great Gatsby") === "borrowed") {
+        borrowedCount++;
+    }
+
+    const totalBooks = 3;
+    const availableCount = totalBooks - borrowedCount;
+
+    const availableElement = document.getElementById("available-count");
+    const borrowedElement = document.getElementById("borrowed-count");
+
+    if (availableElement) {
+        availableElement.textContent = availableCount;
+    }
+
+    if (borrowedElement) {
+        borrowedElement.textContent = borrowedCount;
+    }
+}
+
+window.addEventListener("DOMContentLoaded", updateBookCounts);
