@@ -136,3 +136,21 @@ function returnBook(bookName, statusId, buttonId) {
 
     alert(bookName + " has been returned successfully!");
 }
+window.addEventListener("DOMContentLoaded", function () {
+    const status = document.getElementById("things-status");
+    const button = document.getElementById("things-button");
+
+    if (localStorage.getItem("Things Fall Apart") === "borrowed") {
+        if (status) {
+            status.textContent = "🔴 Borrowed";
+            status.className = "borrowed";
+        }
+
+        if (button) {
+            button.textContent = "Return Book";
+            button.onclick = function () {
+                returnBook("Things Fall Apart", "things-status", "things-button");
+            };
+        }
+    }
+});
