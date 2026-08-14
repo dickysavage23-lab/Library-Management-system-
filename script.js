@@ -147,10 +147,5 @@ window.addEventListener("DOMContentLoaded", function () {
         }
 
         if (button) {
-            button.textContent = "Return Book";
-            button.onclick = function () {
-                returnBook("Things Fall Apart", "things-status", "things-button");
-            };
+    button.textContent = "Return Book";
         }
-    }
-});
