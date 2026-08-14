@@ -115,3 +115,24 @@ function updateDueDates() {
 }
 
 window.addEventListener("DOMContentLoaded", updateDueDates);
+function returnBook(bookName, statusId, buttonId) {
+    const status = document.getElementById(statusId);
+    const button = document.getElementById(buttonId);
+
+    if (status) {
+        status.textContent = "🟢 Available";
+        status.className = "available";
+    }
+
+    if (button) {
+        button.textContent = "Borrow Book";
+        button.onclick = function () {
+            borrowBook(bookName, statusId, buttonId);
+        };
+        button.disabled = false;
+    }
+
+    localStorage.removeItem(bookName);
+
+    alert(bookName + " has been returned successfully!");
+}
