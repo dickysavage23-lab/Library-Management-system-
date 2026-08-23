@@ -147,5 +147,23 @@ window.addEventListener("DOMContentLoaded", function () {
         }
 
         if (button) {
-    button.textContent = "Return Book";
+            button.textContent = "Return Book";
+            button.onclick = function () {
+                returnBook("Things Fall Apart", "things-status", "things-button");
+            };
         }
+
+    } else {
+        if (status) {
+            status.textContent = "🟢 Available";
+            status.className = "available";
+        }
+
+        if (button) {
+            button.textContent = "Borrow Book";
+            button.onclick = function () {
+                borrowBook("Things Fall Apart", "things-status", "things-button");
+            };
+        }
+    }
+});
