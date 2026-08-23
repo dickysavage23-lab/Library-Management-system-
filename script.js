@@ -21,7 +21,6 @@ if (searchInput && searchButton) {
         }
     });
 }
-
 function borrowBook(bookName, statusId, buttonId) {
     const status = document.getElementById(statusId);
     const button = document.getElementById(buttonId);
@@ -167,3 +166,4 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
