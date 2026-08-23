@@ -40,33 +40,98 @@ function borrowBook(bookName, statusId, buttonId) {
     alert(bookName + " has been borrowed successfully!");
 }
 window.addEventListener("DOMContentLoaded", function () {
+
+    // THINGS FALL APART
+    const thingsStatus = document.getElementById("things-status");
+    const thingsButton = document.getElementById("things-button");
+
     if (localStorage.getItem("Things Fall Apart") === "borrowed") {
-        const status = document.getElementById("things-status");
-        const button = document.getElementById("things-button");
-if (localStorage.getItem("The Great Gatsby") === "borrowed") {
-    const status = document.getElementById("gatsby-status");
-    const button = document.getElementById("gatsby-button");
 
-    if (status) {
-        status.textContent = "🔴 Borrowed";
-        status.className = "borrowed";
-    }
-
-    if (button) {
-        button.textContent = "Borrowed";
-        button.disabled = true;
-    }
-}
-        if (status) {
-            status.textContent = "🔴 Borrowed";
-            status.className = "borrowed";
+        if (thingsStatus) {
+            thingsStatus.textContent = "🔴 Borrowed";
+            thingsStatus.className = "borrowed";
         }
 
-        if (button) {
-            button.textContent = "Borrowed";
-            button.disabled = true;
+        if (thingsButton) {
+            thingsButton.textContent = "Return Book";
+            thingsButton.disabled = false;
+
+            thingsButton.onclick = function () {
+                returnBook(
+                    "Things Fall Apart",
+                    "things-status",
+                    "things-button"
+                );
+            };
+        }
+
+    } else {
+
+        if (thingsStatus) {
+            thingsStatus.textContent = "🟢 Available";
+            thingsStatus.className = "available";
+        }
+
+        if (thingsButton) {
+            thingsButton.textContent = "Borrow Book";
+            thingsButton.disabled = false;
+
+            thingsButton.onclick = function () {
+                borrowBook(
+                    "Things Fall Apart",
+                    "things-status",
+                    "things-button"
+                );
+            };
         }
     }
+
+
+    // THE GREAT GATSBY
+    const gatsbyStatus = document.getElementById("gatsby-status");
+    const gatsbyButton = document.getElementById("gatsby-button");
+
+    if (localStorage.getItem("The Great Gatsby") === "borrowed") {
+
+        if (gatsbyStatus) {
+            gatsbyStatus.textContent = "🔴 Borrowed";
+            gatsbyStatus.className = "borrowed";
+        }
+
+        if (gatsbyButton) {
+            gatsbyButton.textContent = "Return Book";
+            gatsbyButton.disabled = false;
+
+            gatsbyButton.onclick = function () {
+                returnBook(
+                    "The Great Gatsby",
+                    "gatsby-status",
+                    "gatsby-button"
+                );
+            };
+        }
+
+    } else {
+
+        if (gatsbyStatus) {
+            gatsbyStatus.textContent = "🟢 Available";
+            gatsbyStatus.className = "available";
+        }
+
+        if (gatsbyButton) {
+            gatsbyButton.textContent = "Borrow Book";
+            gatsbyButton.disabled = false;
+
+            gatsbyButton.onclick = function () {
+                borrowBook(
+                    "The Great Gatsby",
+                    "gatsby-status",
+                    "gatsby-button"
+                );
+            };
+        }
+    }
+
 });
 function updateBookCounts() {
     let borrowedCount = 1;
